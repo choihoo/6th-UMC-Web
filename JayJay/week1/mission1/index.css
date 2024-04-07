@@ -11,8 +11,8 @@ body {
 
 .signUp_form {
   position: fixed;
-  width: 320px;
-  height: 300px;
+  width: 400px;
+  min-height: 350px; 
   padding: 50px 35px;
   top: 50%;
   left: 50%;
@@ -23,9 +23,12 @@ body {
 }
 
 .signUp_list {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  height: 100%;
 }
 
 .signUp_list hr {
@@ -42,10 +45,26 @@ body {
   font-weight: bold;
 }
 
-.name_box input{
+.name_input {
   width: 100%;
   background-color: #def9ff;
   border: 1px solid whitesmoke;
+  margin-top: 5px;
+}
+
+.name_input:focus {
+  border: 1px solid skyblue;
+  outline: none;
+}
+
+.name_correct {
+  color:green;
+  font-size: small;
+}
+
+.name_error {
+  color:red;
+  font-size: small;
 }
 
 .email_box {
@@ -53,15 +72,31 @@ body {
   flex-direction: column;
   align-items: start;
   width: 80%;
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: small;
   font-weight: bold;
 }
 
-.email_box input{
+.email_input{
   width: 100%;
   background-color: #def9ff;
   border: 1px solid whitesmoke;
+  margin-top: 5px;
+}
+
+.email_input:focus {
+  border: 1px solid skyblue;
+  outline: none;
+}
+
+.email_correct {
+  color:green;
+  font-size: small;
+}
+
+.email_error {
+  color:red;
+  font-size: small;
 }
 
 .age_box {
@@ -69,15 +104,31 @@ body {
   flex-direction: column;
   align-items: start;
   width: 80%;
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: small;
   font-weight: bold;
 }
 
-.age_box input{
+.age_input{
   width: 100%;
   background-color: #def9ff;
   border: 1px solid whitesmoke;
+  margin-top: 5px;
+}
+
+.age_input:focus {
+  border: 1px solid skyblue;
+  outline: none;
+}
+
+.age_correct {
+  color:green;
+  font-size: small;
+}
+
+.age_error {
+  color:red;
+  font-size: small;
 }
 
 .password_box {
@@ -85,15 +136,31 @@ body {
   flex-direction: column;
   align-items: start;
   width: 80%;
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: small;
   font-weight: bold;
 }
 
-.password_box input{
+.password_input {
   width: 100%;
   background-color: #def9ff;
   border: 1px solid whitesmoke;
+  margin-top: 5px;
+}
+
+.password_input:focus {
+  border: 1px solid skyblue;
+  outline: none;
+}
+
+.password_correct {
+  color:green;
+  font-size: small;
+}
+
+.password_error {
+  color:red;
+  font-size: small;
 }
 
 .check_pw_box {
@@ -101,23 +168,40 @@ body {
   flex-direction: column;
   align-items: start;
   width: 80%;
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: small;
   font-weight: bold;
 }
 
-.check_pw_box input{
+.check_pw_input{
   width: 100%;
   background-color: #def9ff;
   border: 1px solid whitesmoke;
+  margin-top: 5px;
 }
 
+.check_pw_input:focus {
+  border: 1px solid skyblue;
+  outline: none;
+}
+
+.checkPw_correct {
+  color:green;
+  font-size: small;
+}
+
+.checkPw_error {
+  color:red;
+  font-size: small;
+}
 
 .signUp_button {
-  margin-top: 15px;
+  margin-top: 20px;
   width: 50%;
+  height: 30px;
   background-color: gray;
   border: 1px solid gray;
   border-radius: 5px;
-  color:white
+  color: white;
+  cursor: pointer;
 }
