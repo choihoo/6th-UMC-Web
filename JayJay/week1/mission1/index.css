@@ -1,0 +1,18 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: skyblue;
+}
+
+.signUp_form {
+  position: fixed;
+  width: 320px;
+  height: 300px;
+  padding: 24px 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
