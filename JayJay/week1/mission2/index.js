@@ -34,11 +34,3 @@ function handleEnterPress(event) {
 }
 
 todoInput.addEventListener("keypress", handleEnterPress);
-
-completeButton.addEventListener("click", () => {
-  const newDoneItem = document.createElement("div");
-  const deleteButton = document.createElement("button");
-  deleteButton.textContent = "삭제";
-  newDoneItem.classList.add("done-item");
-  newDoneItem.textContent = newTodoItem.textContent;
-});
