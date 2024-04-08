@@ -20,6 +20,32 @@ document.addEventListener('DOMContentLoaded', function() {
         successMsg.classList.add('success-msg');
         successMsg.style.color = 'green';
 
+        const ageInput = document.querySelector('.age_input');
+        const ageMsg = document.createElement('div');
+        ageMsg.classList.add('age-msg');
+        ageMsg.style.color = 'red';
+        
+        const age = parseFloat(ageInput.value);
+
+        const passwordInput = document.querySelector('.password_input');
+        const passwordMsg = document.createElement('div');
+        passwordMsg.classList.add('password-msg');
+        passwordMsg.style.color = 'red';
+        
+        const password = passwordInput.value;
+        const passwordLength = password.length;
+
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+
+
+        const confirmPasswordInput = document.querySelector('.check_input');
+        const confirmPasswordMsg = document.createElement('div');
+        confirmPasswordMsg.classList.add('confirm-password-msg');
+        confirmPasswordMsg.style.color = 'red';
+        
         if (nameInput.value === '') {
             nameMsg.textContent = '필수 입력 항목입니다!';
             nameMsg.style.color = 'red';
@@ -43,13 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
             displayMessage(emailInput, successMsg);
         }
 
-        const ageInput = document.querySelector('.age_input');
-        const ageMsg = document.createElement('div');
-        ageMsg.classList.add('age-msg');
-        ageMsg.style.color = 'red';
-        
-        const age = parseFloat(ageInput.value);
-
         if (isNaN(age)) {
             ageMsg.textContent = '나이는 숫자를 입력해야 합니다!';
             displayMessage(ageInput, ageMsg);
@@ -68,19 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
             ageMsg.style.color = 'green';
         }
 
-        const passwordInput = document.querySelector('.password_input');
-        const passwordMsg = document.createElement('div');
-        passwordMsg.classList.add('password-msg');
-        passwordMsg.style.color = 'red';
-        
-        const password = passwordInput.value;
-        const passwordLength = password.length;
-
-        const hasLowerCase = /[a-z]/.test(password);
-        const hasUpperCase = /[A-Z]/.test(password);
-        const hasNumber = /[0-9]/.test(password);
-        const hasSpecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
-
         if (password === '') {
             passwordMsg.textContent = '비밀번호는 반드시 입력해야 합니다!';
             displayMessage(passwordInput, passwordMsg);
@@ -98,11 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
             passwordMsg.style.color = 'green';
             displayMessage(passwordInput, passwordMsg);
         }
-
-        const confirmPasswordInput = document.querySelector('.check_input');
-        const confirmPasswordMsg = document.createElement('div');
-        confirmPasswordMsg.classList.add('confirm-password-msg');
-        confirmPasswordMsg.style.color = 'red';
 
         if (confirmPasswordInput.value === '') {
             confirmPasswordMsg.textContent = '비밀번호 확인은 반드시 입력해야 합니다!';
