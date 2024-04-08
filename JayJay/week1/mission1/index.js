@@ -19,6 +19,11 @@ signupBtn.addEventListener("click", () => {
     nameMsg.classList.add("name_correct");
     nameMsg.innerText = "멋진 이름이네요!";
     nameBox.appendChild(nameMsg);
+  } else {
+    const nameErrorMsg = document.createElement("span");
+    nameErrorMsg.classList.add("name_error");
+    nameErrorMsg.innerText = "올바른 이름 형식이 아닙니다.";
+    nameBox.appendChild(nameErrorMsg);
   }
   //email 유효성 검사
   if (
