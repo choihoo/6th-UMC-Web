@@ -9,6 +9,8 @@ const emailInput = document.querySelector(".email_input");
 const ageInput = document.querySelector(".age_input");
 const passwordInput = document.querySelector(".password_input");
 const checkPwInput = document.querySelector(".check_pw_input");
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("closeBtn");
 
 signupBtn.addEventListener("click", () => {
   let isValidForm = true; //비활성화 여부 탐지
@@ -144,4 +146,12 @@ signupBtn.addEventListener("click", () => {
     confirmPwSuccessMsg.innerText = "비밀번호가 일치합니다.";
     checkPwBox.appendChild(confirmPwSuccessMsg);
   }
+
+  if (isValidForm) {
+    modal.style.display = "block";
+  }
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
 });
