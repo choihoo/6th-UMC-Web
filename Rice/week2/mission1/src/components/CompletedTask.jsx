@@ -1,4 +1,4 @@
-function Task({ todo, setTodo }) {
+function CompletedTask({ todo, setTodo }) {
   return (
     <>
       <p>
@@ -8,4 +8,4 @@ function Task({ todo, setTodo }) {
   );
 }
 
-export default Task;
+export default CompletedTask;
